@@ -1,13 +1,14 @@
 package elroykanye;
 
+import elroykanye.examples.StackTracing;
 import elroykanye.methods.TryCatch;
 
 public class Main {
     public static void main(String[] args) {
-        new TryCatch().divisionByZero();
+        new StackTracing().arithmetic();
     }
 
-    /*
+    /* A) Intro
      * Note: To see examples used in this module, visit the 'examples' package.
      *
      * There are five keywords used for exception handling:
@@ -22,5 +23,40 @@ public class Main {
      * After this, the JVM tries to find the code which wants to handle (resolve) the exceptional situation called the
      * handler. If found, it passes the newly created object to this handler (catching the exception). The handler is
      * specified by catch block immediately after the try block.
+     */
+
+    /*
+     * B) Types of Exceptions
+     *
+     * At the top of the exception class hierarchy is the Throwable class. Under the Throwable, are two classes called
+     * Exception and Error.
+     *
+     * The Error class represents serious scenarios that apps can neither expect nor recover from. Examples are memory,
+     * stack overflow, class format, no definition found etc.
+     *
+     * The Exception class represents the rest of the exceptional cases that apps can catch and handle.
+     * Exceptions are usually categorized into 2 groups: Checked and Unchecked
+     *
+     * Checked exceptions are those that must be caught or declared to be thrown. Java considers Throwable and any of
+     * its subclass that is not also a subclass of either RuntimeException or Error as checked Exceptions. These
+     * exceptions should be handled in the code to avoid compile time errors.
+     *
+     * Unchecked exceptions are those which need not be caught or declared to be thrown explicitly.
+     */
+
+    /*
+     * C) Catching Exceptions
+     *
+     * Java exceptions are organised into a hierarchy. The advantage of this arrangement is that if we write a catch
+     * to catch a certain exception in the hierarchy, then it can also catch all subclasses of that exception too.
+     */
+
+    /*
+     * D) Stack Tracing
+     *
+     * The Throwable class and all inheriting classes of this class have very useful methods to collect detailed
+     * information about an exception.
+     * One of such is the e.printStackTrace() methods (where 'e' is the Throwable object) prints a stack trace of the
+     * current throwable, e.
      */
 }

@@ -6,8 +6,13 @@ public class TryCatch {
         try {
             result = 100/d;
         } catch (ArithmeticException e) {
-            System.out.println("Diving by zero error occurred");
+            System.out.println("Arithmetic exception occurred");
+            result = 100;
         }
+
+        /*
+         * When this program is executed, it no longer terminates abruptly.
+         */
 
     }
 }
