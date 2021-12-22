@@ -1,7 +1,20 @@
 package elroykanye;
 
+import elroykanye.samples.ExtendingThread;
+import elroykanye.samples.ImplementingRunnable;
+
 public class MultiThreading {
     public static void main(String[] args) {
+        for (int i = 5; i >= 1; i--) {
+            System.out.println(Thread.currentThread().getName() + " : " + i);
+        }
+        Thread t1 = new Thread(new ImplementingRunnable());
+
+        t1.start();
+
+    }
+
+    public static void sampleMain() {
         Thread mainThread = Thread.currentThread();
 
         System.out.println("Current thread: " + mainThread);
@@ -17,8 +30,6 @@ public class MultiThreading {
         System.out.println("Current Thread: "+mainThread);
         System.out.println("Name: "+mainThread.getName());
         System.out.println("Priority: "+mainThread.getPriority());
-
-
     }
 
     /*
@@ -41,5 +52,21 @@ public class MultiThreading {
      * may be spawned from this thread.
      *
      * To work with the main thread, we can reference the object from Thread in the main() method. View the code above.
+     */
+
+    /*
+     * C) Sleep
+     *
+     * A thread can be made to suspend execution using sleep() method, causing the thread to cease execution for the
+     * specified duration given as a parameter to this method.
+     */
+
+    /*
+     * D) Creating a Thread
+     *
+     * There are two ways to create threads:
+     * 1) Extending the java.lang.Thread class
+     * 2) Implementing the java.lang.Runnable interface.
+     * Check the code samples in the samples package.
      */
 }
