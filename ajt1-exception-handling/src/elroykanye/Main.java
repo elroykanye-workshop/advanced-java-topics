@@ -5,7 +5,7 @@ import elroykanye.methods.TryCatch;
 
 public class Main {
     public static void main(String[] args) {
-        new StackTracing().arithmetic();
+        new TryCatch().divisionByZeroAndIndexOutOfBounds();
     }
 
     /* A) Intro
