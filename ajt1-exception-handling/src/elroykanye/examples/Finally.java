@@ -8,6 +8,8 @@ public class Finally {
     public void readFile() throws IOException {
 
         String dir = "/home/kanye/Development/Learning/advanced-java-topics/ajt1-exception-handling/src/elroykanye/examples/aFile.txt";
+
+        // the following try block is called a 'try-with-resources'
         try (FileInputStream fis = new FileInputStream(dir)) {
             System.out.println("In try");
             int k = fis.read();

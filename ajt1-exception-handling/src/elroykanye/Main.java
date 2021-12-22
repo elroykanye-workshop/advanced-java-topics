@@ -7,11 +7,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        try {
-            new Finally().readFile();
-        } catch (IOException e) {
-            System.out.println("IO Exception");
-        }
+        System.out.println("Hello, Exception!");
     }
 
     /* A) Intro
@@ -83,5 +79,25 @@ public class Main {
      * This is a block used together with the try block to include some piece of code that should be executed regardless
      * of the state of execution of the code in the try or catch blocks. Operations that can be performed here include
      * closing a database connection, removing the reference to a file, etc.
+     */
+
+    /*
+     * Note:
+     * 1) Single try, multiple catch and single finally.
+     * 2) Try-catch can be nested just like if-else
+     */
+
+    /*
+     * G) Try-With-Resources
+     * This enables us to create resources in the try statement and use them in the try block. When the try block exits,
+     * the JVM automatically closes these resources. The only requirement is that the resources class must directly or
+     * indirectly implement the java.lang.AutoCloseable interface.
+     */
+
+    /*
+     * H) Custom Exception Classes
+     *
+     * Java allows for the creation of new Exception classes that suit the use case of the application being developed.
+     * Such classes must inherit (directly or indirectly) the Throwable class
      */
 }
