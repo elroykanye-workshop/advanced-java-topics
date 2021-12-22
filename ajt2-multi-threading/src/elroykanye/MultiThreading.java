@@ -2,16 +2,15 @@ package elroykanye;
 
 import elroykanye.samples.ExtendingThread;
 import elroykanye.samples.ImplementingRunnable;
+import elroykanye.samples.Timer;
 
 public class MultiThreading {
-    public static void main(String[] args) {
-        for (int i = 5; i >= 1; i--) {
-            System.out.println(Thread.currentThread().getName() + " : " + i);
-        }
-        Thread t1 = new Thread(new ImplementingRunnable());
+    public static void main(String[] args) throws InterruptedException {
+        Timer timer = new Timer();
+        timer.start();
 
-        t1.start();
-
+        Thread.sleep(4000);
+        timer.interrupt();
     }
 
     public static void sampleMain() {
@@ -68,5 +67,19 @@ public class MultiThreading {
      * 1) Extending the java.lang.Thread class
      * 2) Implementing the java.lang.Runnable interface.
      * Check the code samples in the samples package.
+     */
+
+    /*
+     * E) Interrupting a Thread
+     *
+     * This can be done by sending a request to a thread using its interrupt() method that sets the thread's interrupt
+     * flag.
+     */
+
+    /*
+     * F) Suspending and Resuming
+     *
+     * A thread can be suspending and resumed using the combination of wait() and notify() methods.
+     * Check the SuspendResume class in examples.
      */
 }
