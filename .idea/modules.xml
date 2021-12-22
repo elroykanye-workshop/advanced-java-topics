@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/advanced-java-topics.iml" filepath="$PROJECT_DIR$/advanced-java-topics.iml" />
       <module fileurl="file://$PROJECT_DIR$/ajt1-exception-handling/ajt1-exception-handling.iml" filepath="$PROJECT_DIR$/ajt1-exception-handling/ajt1-exception-handling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajt2-multi-threading/ajt2-multi-threading.iml" filepath="$PROJECT_DIR$/ajt2-multi-threading/ajt2-multi-threading.iml" />
     </modules>
   </component>
 </project>
