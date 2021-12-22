@@ -2,10 +2,12 @@ package elroykanye;
 
 
 import elroykanye.examples.SuspendResume;
+import elroykanye.samples.MinMaxPriority;
 
 public class MultiThreading {
     public static void main(String[] args) throws InterruptedException {
-        SuspendResume.main();
+        new MinMaxPriority().showPriority();
+        System.out.println(Thread.currentThread().getPriority());
     }
 
     public static void sampleMain() {
