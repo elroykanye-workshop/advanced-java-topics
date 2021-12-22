@@ -5,7 +5,7 @@ import elroykanye.examples.Finally;
 
 import java.io.IOException;
 
-public class Main {
+public class ExceptionHandling {
     public static void main(String[] args) {
         System.out.println("Hello, Exception!");
     }

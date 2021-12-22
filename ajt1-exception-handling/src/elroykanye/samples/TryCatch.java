@@ -1,4 +1,4 @@
-package elroykanye.methods;
+package elroykanye.samples;
 
 import java.util.Scanner;
 

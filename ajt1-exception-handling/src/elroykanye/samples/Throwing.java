@@ -1,4 +1,4 @@
-package elroykanye.methods;
+package elroykanye.samples;
 
 public class Throwing {
     public void testThrow() {
