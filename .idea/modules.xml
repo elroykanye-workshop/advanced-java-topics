@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/advanced-java-topics.iml" filepath="$PROJECT_DIR$/advanced-java-topics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajt1-exception-handling/ajt1-exception-handling.iml" filepath="$PROJECT_DIR$/ajt1-exception-handling/ajt1-exception-handling.iml" />
+    </modules>
+  </component>
+</project>
