@@ -1,11 +1,12 @@
 package elroykanye;
 
 import elroykanye.examples.StackTracing;
+import elroykanye.methods.Throwing;
 import elroykanye.methods.TryCatch;
 
 public class Main {
     public static void main(String[] args) {
-        new TryCatch().divisionByZeroAndIndexOutOfBounds();
+        new Throwing().testThrow();
     }
 
     /* A) Intro
@@ -58,5 +59,12 @@ public class Main {
      * information about an exception.
      * One of such is the e.printStackTrace() methods (where 'e' is the Throwable object) prints a stack trace of the
      * current throwable, e.
+     */
+
+    /*
+     * E) Throwing
+     *
+     * Also, it is possible to explicitly throw an exception using the 'throw' keyword. Check the throwing method in
+     * the methods package.
      */
 }

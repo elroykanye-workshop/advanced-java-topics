@@ -36,5 +36,10 @@ public class TryCatch {
         } finally {
             System.out.println("The name you entered is " + name);
         }
+
+        /*
+         * Let it be known that the JVM always picks the first catch block that matches the current exception, hence
+         * multiple catch blocks should handle exceptions in descending order of specificity.
+         */
     }
 }
