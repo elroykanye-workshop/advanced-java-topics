@@ -2,12 +2,12 @@ package elroykanye;
 
 
 import elroykanye.examples.SuspendResume;
+import elroykanye.samples.Join;
 import elroykanye.samples.MinMaxPriority;
 
 public class MultiThreading {
     public static void main(String[] args) throws InterruptedException {
-        new MinMaxPriority().showPriority();
-        System.out.println(Thread.currentThread().getPriority());
+        new Join().main();
     }
 
     public static void sampleMain() {
@@ -87,5 +87,14 @@ public class MultiThreading {
      * than lower priority threads.
      * Priorities are represented by integer numbers from 1 (lowest) to 10 (highest) which are represented by 2 static
      * fields MIN_PRIORITY and MAX_PRIORITY
+     */
+
+    /*
+     * H) Join
+     *
+     * Multiple threads run concurrently; one does not wait for the other. However, it is necessary that a thread should
+     * not proceed further until another thread finishes its task.
+     * This is a dependency of one thread on another which can be achieved using the join() method.
+     * This will make the caller blocked until the called thread dies.
      */
 }
