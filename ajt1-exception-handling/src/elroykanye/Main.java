@@ -1,12 +1,17 @@
 package elroykanye;
 
-import elroykanye.examples.StackTracing;
-import elroykanye.methods.Throwing;
-import elroykanye.methods.TryCatch;
+
+import elroykanye.examples.Finally;
+
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        new Throwing().testThrow();
+        try {
+            new Finally().readFile();
+        } catch (IOException e) {
+            System.out.println("IO Exception");
+        }
     }
 
     /* A) Intro
@@ -64,7 +69,19 @@ public class Main {
     /*
      * E) Throwing
      *
-     * Also, it is possible to explicitly throw an exception using the 'throw' keyword. Check the throwing method in
-     * the methods package.
+     * a) Throw: Also, it is possible to explicitly throw an exception using the 'throw' keyword. Check the throwing
+     * method in the methods package.
+     *
+     * b) Throws: A method must specify the list of checked exceptions that it might (directly/indirectly) raise but
+     * does not handle them using 'throws' clause. This specification enables callers of the method either to guard
+     * themselves by using appropriate try-catch blocks or to re-declare it.
+     */
+
+    /*
+     * F) Finally
+     *
+     * This is a block used together with the try block to include some piece of code that should be executed regardless
+     * of the state of execution of the code in the try or catch blocks. Operations that can be performed here include
+     * closing a database connection, removing the reference to a file, etc.
      */
 }
