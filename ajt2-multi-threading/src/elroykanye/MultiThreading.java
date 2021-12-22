@@ -1,16 +1,11 @@
 package elroykanye;
 
-import elroykanye.samples.ExtendingThread;
-import elroykanye.samples.ImplementingRunnable;
-import elroykanye.samples.Timer;
+
+import elroykanye.examples.SuspendResume;
 
 public class MultiThreading {
     public static void main(String[] args) throws InterruptedException {
-        Timer timer = new Timer();
-        timer.start();
-
-        Thread.sleep(4000);
-        timer.interrupt();
+        SuspendResume.main();
     }
 
     public static void sampleMain() {
@@ -81,5 +76,14 @@ public class MultiThreading {
      *
      * A thread can be suspending and resumed using the combination of wait() and notify() methods.
      * Check the SuspendResume class in examples.
+     */
+
+    /*
+     * G) Thread Priority
+     *
+     * Every thread in java has a priority. Higher priority threads get more preference in terms of CPU, I/O time, etc
+     * than lower priority threads.
+     * Priorities are represented by integer numbers from 1 (lowest) to 10 (highest) which are represented by 2 static
+     * fields MIN_PRIORITY and MAX_PRIORITY
      */
 }
