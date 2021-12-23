@@ -22,14 +22,11 @@
   <p align="center">
     Tap into amazing features of Java and the JVM!
     <br />
-    <a href="#"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="#">View Demo</a>
     ·
     <a href="https://github.com/elroykanye/advanced-java-topics/issues">Report and Issue</a>
     ·
     <a href="https://github.com/elroykanye/advanced-java-topics/issues">Request a Topic/Explanation</a>
+    ·
   </p>
 </div>
 
