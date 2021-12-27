@@ -32,3 +32,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+race-condition-result-sync.txt
+race-condition-result.txt

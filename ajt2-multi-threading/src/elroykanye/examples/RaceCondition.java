@@ -83,10 +83,15 @@ class Increment extends Thread {
 
     @Override
     public void run() {
-        new Decrement(this.counter);
+        Decrement decrement = new Decrement(this.counter);
         for(int i = 0; i < 10000; i++) {
             if(i % 100 == 0) System.out.println("Increment ++ : " + counter.val);
             this.counter.inc();
+        }
+        try {
+            decrement.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
     }

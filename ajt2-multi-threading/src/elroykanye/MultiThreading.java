@@ -1,13 +1,15 @@
 package elroykanye;
 
 
+import elroykanye.examples.RaceCondition;
 import elroykanye.examples.SyncRaceCondition;
 
 public class MultiThreading {
     public static void main(String[] args) throws InterruptedException {
-        for(int i = 0; i < 25; i ++) {
-            new SyncRaceCondition().main();
+        for(int i = 0; i < 10; i ++) {
+            new RaceCondition().main();
         }
+
     }
 
     public static void sampleMain() {

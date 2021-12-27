@@ -7,8 +7,13 @@ import java.io.IOException;
 
 class SyncCounter {
     int val = 0;
-    synchronized void inc() { val++; }
-    synchronized void dec() { val--; }
+    final Object o = new Object();
+    synchronized void inc() {
+        val++;
+    }
+    synchronized void dec() {
+        val--;
+    }
 
     /*
      * This class has a single field, 'val' which gets incremented and decremented when the methods inc() and dec() are
@@ -44,13 +49,14 @@ public class SyncRaceCondition  {
     public void main() throws InterruptedException {
         SyncIncrement syncIncrement = new SyncIncrement(counter);
         syncIncrement.join();
+
         saveFinalVal();
     }
 
-    public void saveFinalVal() {
+    public synchronized void saveFinalVal() {
         System.out.println("-------- Sync Final value of counter val = " + counter.val + " --------");
 
-        String resultFile = "sync-race-condition-result.txt";
+        String resultFile = "race-condition-result-sync.txt";
         File file = new File(resultFile);
 
         String newLine = "Object: " + counter + " - val: " + counter.val;
@@ -83,12 +89,16 @@ class SyncIncrement extends Thread {
 
     @Override
     public void run() {
-        new SyncDecrement(this.counter);
+        SyncDecrement syncDecrement = new SyncDecrement(this.counter);
         for(int i = 0; i < 10000; i++) {
             if(i % 100 == 0) System.out.println("Increment ++ : " + counter.val);
             this.counter.inc();
         }
-
+        try {
+            syncDecrement.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 
