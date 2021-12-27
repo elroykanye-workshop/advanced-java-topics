@@ -7,8 +7,8 @@ import java.io.IOException;
 
 class SyncCounter {
     int val = 0;
-    void inc() { val++; }
-    void dec() { val--; }
+    synchronized void inc() { val++; }
+    synchronized void dec() { val--; }
 
     /*
      * This class has a single field, 'val' which gets incremented and decremented when the methods inc() and dec() are
@@ -48,9 +48,9 @@ public class SyncRaceCondition  {
     }
 
     public void saveFinalVal() {
-        System.out.println("-------- Final value of counter val = " + counter.val + " --------");
+        System.out.println("-------- Sync Final value of counter val = " + counter.val + " --------");
 
-        String resultFile = "race-condition-result.txt";
+        String resultFile = "sync-race-condition-result.txt";
         File file = new File(resultFile);
 
         String newLine = "Object: " + counter + " - val: " + counter.val;

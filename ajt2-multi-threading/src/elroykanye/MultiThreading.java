@@ -1,10 +1,12 @@
 package elroykanye;
 
 
+import elroykanye.examples.SyncRaceCondition;
+
 public class MultiThreading {
     public static void main(String[] args) throws InterruptedException {
         for(int i = 0; i < 25; i ++) {
-
+            new SyncRaceCondition().main();
         }
     }
 
