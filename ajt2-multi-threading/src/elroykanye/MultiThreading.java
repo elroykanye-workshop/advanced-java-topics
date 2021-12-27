@@ -1,13 +1,12 @@
 package elroykanye;
 
 
-import elroykanye.examples.SuspendResume;
-import elroykanye.samples.Join;
-import elroykanye.samples.MinMaxPriority;
+import elroykanye.examples.RaceCondition;
 
 public class MultiThreading {
     public static void main(String[] args) throws InterruptedException {
-        new Join().main();
+        RaceCondition rc = new RaceCondition();
+        rc.start();
     }
 
     public static void sampleMain() {
@@ -96,5 +95,11 @@ public class MultiThreading {
      * not proceed further until another thread finishes its task.
      * This is a dependency of one thread on another which can be achieved using the join() method.
      * This will make the caller blocked until the called thread dies.
+     */
+
+    /*
+     * I) Synchronisation
+     *
+     * >> Head over to RaceCondition in the examples package
      */
 }
