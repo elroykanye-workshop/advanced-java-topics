@@ -1,12 +1,11 @@
 package elroykanye;
 
 
-import elroykanye.examples.RaceCondition;
-
 public class MultiThreading {
     public static void main(String[] args) throws InterruptedException {
-        RaceCondition rc = new RaceCondition();
-        rc.start();
+        for(int i = 0; i < 25; i ++) {
+
+        }
     }
 
     public static void sampleMain() {
@@ -101,5 +100,18 @@ public class MultiThreading {
      * I) Synchronisation
      *
      * >> Head over to RaceCondition in the examples package
+     *
+     * Fortunately, java provides a mechanism to avoid the situation described in RaceCondition.
+     * In general, such situations can be avoided if we ensure that critical sections are not executed in an interleaved
+     * fashion. This can be done using the 'synchronized' keyword.
+     *
+     * There are synchronized methods and synchronized blocks. A method is made synchronized by adding the keyword
+     * before its declaration.
+     * In java, every object has internal entity called 'internal lock' which is like a privilege that only one thread
+     * can occupy at any one time. Thus, if a thread does own a lock of an object, no other thead can own the lock of
+     * the same object until the thread that owns the lock releases it.
+     * Addition of synchronized means just requesting to own a lock. Before getting a lock to an object, the thread must
+     * wait until that lock is available; and other threads must wait for a thread holding a lock to release that lock
+     * before it can be collected by another thread.
      */
 }
