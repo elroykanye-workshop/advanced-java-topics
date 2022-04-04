@@ -5,6 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/advanced-java-topics.iml" filepath="$PROJECT_DIR$/advanced-java-topics.iml" />
       <module fileurl="file://$PROJECT_DIR$/ajt1-exception-handling/ajt1-exception-handling.iml" filepath="$PROJECT_DIR$/ajt1-exception-handling/ajt1-exception-handling.iml" />
       <module fileurl="file://$PROJECT_DIR$/ajt2-multi-threading/ajt2-multi-threading.iml" filepath="$PROJECT_DIR$/ajt2-multi-threading/ajt2-multi-threading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajt3-garbage-collection/ajt3-garbage-collection.iml" filepath="$PROJECT_DIR$/ajt3-garbage-collection/ajt3-garbage-collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajt4-collection-framework/ajt4-collection-framework.iml" filepath="$PROJECT_DIR$/ajt4-collection-framework/ajt4-collection-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajt6-reflection/ajt6-reflection.iml" filepath="$PROJECT_DIR$/ajt6-reflection/ajt6-reflection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajt7-jni/ajt7-jni.iml" filepath="$PROJECT_DIR$/ajt7-jni/ajt7-jni.iml" />
     </modules>
   </component>
 </project>
